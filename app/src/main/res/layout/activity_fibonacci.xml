@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="leeco.fibonacci.Fibonacci">
+
+    <RelativeLayout
+        android:layout_width="357dp"
+        android:layout_height="460dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginRight="13dp"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <EditText
+            android:id="@+id/fibInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="27dp"
+            android:ems="10"
+            android:inputType="number" />
+
+        <RadioGroup
+            android:id="@+id/rG"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/fibOutput"
+            android:layout_marginBottom="43dp">
+
+
+
+            <RadioButton
+                android:id="@+id/iJ"
+                android:text="fib_iJ"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <RadioButton
+                android:id="@+id/rJ"
+                android:text="fib_rJ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/iN"
+                android:text="fib_iN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/rN"
+                android:text="fib_rN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnCompute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="39dp"
+            android:text="Compute"
+            android:layout_above="@+id/fibOutput"
+            android:layout_alignEnd="@+id/fibInput" />
+
+        <TextView
+            android:id="@+id/fibOutput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Result is:"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/fibInput" />
+
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
